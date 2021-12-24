@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script/jquery-3.5.1.js"></script>
+    <script src="script/jquery-3.6.0.js"></script>
+    <script src="script/script.js" defer></script>
+    <script src="cinema_fr.geojson"></script>
+
+
+</head>
+
+<body>
+    <header>
+
+        <svg id="menu" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="-10 -20 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+
+            <rect id="haut" fill="currentColor" width="34" height="4" />
+            <rect id="mid" y="11" fill="currentColor" width="34" height="4" />
+            <rect id="bas" y="23" fill="currentColor" width="34" height="4" />
+            <circle id="cercle" cx="17" cy="13.5" r="30" stroke="currentColor" stroke-width="5" fill="none" />
+
+        </svg>
+        <nav id="menutxt">
+            <h1>Menu de navigation</h1>
+
+            <ul onclick="closeNav()">
+                <li>
+                    <a href="#page1"> 1 - Front Page </a>
+                </li>
+                <li>
+                    <a href="#page2"> 2 - About The Film</a>
+                </li>
+                <li>
+                    <a href="#page3"> 3 - Characters</a>
+                </li>
+                <li>
+                    <a href="#page4"> 4 - Videos & Images</a>
+                </li>
+                <li>
+                    <a href="#page5"> 5 - Find A Theater</a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <div id="studios">
+        <a target="_blank" href="https://www.warnerbros.fr/">
+            <img src="medias/wb_logo.svg" alt="wb_logo">
+        </a>
+        <a target="_blank" href="https://www.legendary.com/">
+            <img src="medias/legendary_logo.svg" alt="legendary_logo">
+        </a>
+    </div>
+    <div id="social">
+        <a target="_blank" href="https://fr-fr.facebook.com/">
+            <img src="medias/logo_facebook.svg" alt="logo_facebook">
+        </a>
+        <a target="_blank" href="https://https://twitter.com//">
+            <img src="medias/logo_twitter.svg" alt="logo_twitter">
+        </a>
+        <a target="_blank" href="https://www.instagram.com/">
+            <img src="medias/logo_instagram.svg" alt="logo_instagram" width="50px" height="50px">
+        </a>
+
+    </div>
+
+    <img src="medias/logo.png" alt="">
+    <section id="page1">
+        <div>
+            <div id="video"></div>
+        </div>
+    </section>
+
+    <section id="page2">
+        <h1>A Propos du film</h1>
+        <img src="medias/fletcher2.jpg" alt="">
+        <p>Whiplash est un film dramatique américain écrit et réalisé par Damien Chazelle, sorti en 2014.
+
+            Il s'agit de l'adaptation du court métrage homonyme du même réalisateur, qui a remporté le Prix du jury au
+            festival de Sundance 2013. Le long métrage remporte quant à lui le Grand prix du jury et le Prix du public
+            de l'édition 2014 du festival dans la section « U.S. Dramatic1. ». Il obtient ensuite le Grand prix et le
+            Prix du public du Festival du cinéma américain de Deauville 2014. </p>
+        <p>Andrew s'entraîne avec acharnement pour accéder aux attentes toujours plus inaccessibles de Fletcher. Sous
+            prétexte de pousser ses élèves au-delà de leurs limites, ce dernier alterne les conseils amicaux et les
+            déchaînements d'injures, n'hésitant pas à aller jusqu'à la violence physique, lançant une chaise sur Andrew
+            car il n'arrivait pas à suivre le tempo. Fletcher raconte pour se justifier l'histoire de Charlie Parker, le
+            futur « Bird » : adolescent, il participe à un jam avec Jo Jones qui lui lance une cymbale à la tête sous
+            prétexte d'un jeu particulièrement décevant. Parker, dépité, rentre chez lui et s'entraîne pendant un an.
+        </p>
+        <p>Le tournage de Whiplash débute en septembre 2013 à Los Angeles, y compris à l'Hôtel Barclay, Palace Theater
+            et l'Orpheum Theatre15,16. Il se déroule pendant dix-neuf jours, avec un horaire de quatorze heures de
+            tournage par jour17,18, à Santa Clarita, en Californie avec quelques plans d'extérieur à New York, où le
+            film est censé se dérouler18,11. Chazelle subit un grave accident de voiture lors de la troisième semaine de
+            tournage et est hospitalisé. On lui diagnostique une possible commotion cérébrale, mais il revient le
+            lendemain sur le tournage terminer le film dans les temps. </p>
+    </section>
+
+    <section id="page3">
+        <div>
+            <span>
+                <img src="medias/angle-left-b.svg" width="90px" height="90px">
+            </span>
+            <div>
+                <div>
+                    <img src="medias/perso1.jpg" alt="Image du film whiplash">
+                    <p>Fletcher</p>
+                </div>
+                <div>
+                    <img src="medias/perso2.jpg" alt="Image du film whiplash">
+                    <p>Andrew Newman</p>
+
+                </div>
+                <div>
+                    <img src="medias/perso3.jpg" alt="Image du film whiplash">
+                    <p>La meuf nulle</p>
+
+                </div>
+                <div>
+                    <img src="medias/img4.jpg" alt="Image du film whiplash">
+                    <p>Fletcher multi-bras</p>
+
+                </div>
+
+            </div>
+            <span>
+                <img src="medias/angle-right-b.svg" width="90px" height="90px">
+            </span>
+        </div>
+    </section>
+
+    <section id="page4">
+        <div>
+            <h1>
+                Gallerie d'images
+            </h1>
+            <div>
+                <img src="medias/img1.jpg" alt="Image du film whiplash">
+                <img src="medias/img2.jpg" alt="Image du film whiplash">
+                <img src="medias/img3.jpg" alt="Image du film whiplash">
+                <img src="medias/img4.jpg" alt="Image du film whiplash">
+
+            </div>
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="page5">
+        <h1>Trouvez un cinéma !</h1>
+        <div id="carte">
+        </div>
+        <p>
+
+        </p>
+    </section>
+</body>
+
+</html>

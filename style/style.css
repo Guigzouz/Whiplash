@@ -1,0 +1,483 @@
+*{
+  scroll-behavior: smooth;
+}
+
+/* css menu */
+svg {
+  position: fixed;
+  top: 10vh;
+  left: 0vh;
+  color: white;
+  stroke: white;
+  width: 7vw;
+  height: 7vh;
+}
+
+.anim-nav {
+  color: black;
+  transition: 2s linear;
+}
+
+/*Menu dÃ©ploiyable*/
+#menutxt {
+  background: linear-gradient(to bottom right,
+      rgba(250, 154, 63, 0.747),
+      rgba(22, 22, 22, 0.689));
+  position: fixed;
+  left: -100vw;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  transition: 1s;
+}
+
+header>nav>h1 {
+  color: rgb(223, 202, 164);
+  text-align: center;
+  font-size: 60px;
+}
+
+header>nav>ul>li {
+  padding-top: 2vh;
+  font-size: 20px;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+li::marker {
+  content: none;
+}
+
+header>nav>ul>li>a:hover {
+  background-color: white;
+  color: black;
+  font-size: 145%;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+header>nav>ul>li>a {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -200;
+    stroke-width: 5px;
+  }
+
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 5px;
+  }
+}
+
+svg:hover>#cercle {
+  -webkit-animation: 0.7s draw linear forwards;
+  animation: 0.7s draw linear forwards;
+}
+
+svg:hover>#mid {
+  width: 22px;
+  height: 4px;
+}
+
+svg:hover>#bas {
+  width: 15px;
+  height: 4px;
+}
+
+#haut {
+  transform-origin: 17px 2px;
+}
+
+#mid {
+  transform-origin: 17px 13.5px;
+}
+
+#bas {
+  transform-origin: 17px 25px;
+}
+
+rect {
+  transition: 0.5s;
+}
+
+svg {
+  z-index: 20;
+}
+
+#menu {
+  animation: apparition-left 1.2s ease-in-out;
+}
+
+@keyframes apparition-left {
+  from {
+    opacity: 0;
+    transform: translatex(-100px);
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    transform: translatex(0px);
+    visibility: visible;
+  }
+}
+
+#video {
+  animation: apparition-left 1.2s ease-in-out;
+}
+
+@keyframes apparition-left {
+  from {
+    opacity: 0;
+    transform: translatex(-500px);
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    transform: translatex(0px);
+    visibility: visible;
+  }
+}
+
+/*Section carte geolocalisation*/
+section:nth-of-type(5) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 5fr auto 1fr;
+}
+
+section:nth-of-type(5)>div {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+/*Burger menu*/
+
+/* Section texte a propos */
+section:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50vh 40vh 10vh;
+}
+
+section:nth-of-type(2)>h1 {
+  grid-column: 1/1;
+  grid-row: 1;
+  align-self: flex-end;
+
+  padding-bottom: 20px;
+}
+
+section:nth-of-type(2)>p:nth-of-type(1) {
+  grid-column: 1/1;
+  grid-row: 2;
+  padding-left: 30px;
+  padding-top: 50px;
+}
+
+section:nth-of-type(2)>p:nth-of-type(2) {
+  grid-column: 2;
+  grid-row: 2;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+}
+
+section:nth-of-type(2)>p:nth-of-type(3) {
+  grid-column: 3;
+  grid-row: 2;
+  padding-right: 30px;
+  padding-top: 50px;
+
+}
+
+section:nth-of-type(2)>p {
+  background-color: rgba(160, 124, 76, 0.25);
+  word-wrap: break-word;
+}
+
+section:nth-of-type(2)>img {
+  position: absolute;
+  left: 55vw;
+  top: 115vh;
+  height: 275px;
+  width: 410px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dimensionner les diapos et leur contenu */
+/* Ajouter un fond unique, couvrant l'écran */
+/* Fixer le fond, et hop ! */
+section {
+  height: 100vh;
+  text-align: center;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section:nth-of-type(1) {
+  /* On peut aussi mettre un gif animé ou un webp animé... */
+  background-image: url("../medias/bothjpg.jpg");
+}
+
+
+section:nth-of-type(2) {
+  background-image: url("../medias/andrew3.jpg");
+}
+
+section:nth-of-type(3) {
+  background-image: url("../medias/andrew2.jpg");
+}
+
+section:nth-of-type(4) {
+  background-image: url("../medias/fletcher.jpg");
+}
+
+section:nth-of-type(5) {
+  background-image: url("../medias/andrew1.jpg");
+}
+
+body {
+  /*overflow-y: scroll;*/
+  scroll-snap-type: y proximity;
+}
+
+body section {
+  scroll-snap-align: center;
+}
+
+body>img {
+  position: fixed;
+  height: 120px;
+  width: 197px;
+  top: -3%;
+  left: -1%;
+}
+
+/*Lecteur c=vidéo*/
+
+#video {
+  position: relative;
+  width: 50vw;
+  height: calc(50vw * 390 / 640);
+  margin: auto;
+}
+
+#video {
+  width: 40vw;
+  height: calc(40vw * 390 / 640);
+  display: block;
+  position: absolute;
+  bottom: 12%;
+  left: 10vw;
+}
+
+.scroll {
+  position: fixed !important;
+  width: 30vw !important;
+  height: calc(30vw * 3 / 4) !important;
+  bottom: 40vh !important;
+  left: 60vw !important;
+}
+
+/*carroussel slide 3*/
+section:nth-of-type(3)>* {
+  box-sizing: border-box;
+
+}
+
+section:nth-of-type(3) {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background-color: aqua;
+
+}
+
+section:nth-of-type(3)>div {
+  display: flex;
+  justify-content: space-between;
+  height: 80vh;
+  background-color: rgba(160, 124, 76, 0.25);
+  align-items: center;
+}
+
+section:nth-of-type(3)>div>div>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section:nth-of-type(3)>div>div>div>img {
+  object-fit: cover;
+  width: inherit;
+  height: inherit;
+}
+
+section:nth-of-type(3)>div>div>div>p {
+  font-size: large;
+}
+
+section:nth-of-type(3)>div>div>div:not(:first-of-type) {
+  display: none;
+}
+
+section:nth-of-type(3)>div>div {
+  width: 50vw;
+  height: 50vh;
+  position: relative;
+}
+
+/* carroussel slide 4*/
+section:nth-of-type(4) {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+section:nth-of-type(4)>* {
+  box-sizing: border-box;
+
+}
+
+section:nth-of-type(4)>h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+section:nth-of-type(4)>div>div:first-of-type {
+  width: 50vw;
+  height: 50vh;
+  position: relative;
+}
+
+section:nth-of-type(4)>div {
+  background-color: rgba(160, 124, 76, 0.25);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+
+section:nth-of-type(4) img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+section:nth-of-type(4) img:not(:first-of-type) {
+  display: none;
+}
+
+section:nth-of-type(4)>div:nth-of-type(1) {
+  text-align: center;
+  /*align-items: center;*/
+  /*margin-top: 40vh;*/
+}
+
+section:nth-of-type(4)>div>div>span {
+  display: inline-block;
+  width: 1vw;
+  height: 1vw;
+  margin: 0 1vw;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+
+}
+
+section:nth-of-type(4)>div>div>span:hover {
+  transition: 150ms linear;
+  transform: scale(1.2);
+}
+
+/* Réseaux */
+
+
+#studios>a>img {
+  height: 6vh;
+}
+
+#social>a>img {
+  height: 6vh;
+}
+
+#studios {
+  position: fixed;
+  Top: 10%;
+  right: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18vh;
+  align-items: center;
+
+}
+
+#social {
+  position: fixed;
+  bottom: 10%;
+  right: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25vh;
+  align-items: center;
+
+}
+
+/* Hover des images studios et socials*/
+
+#social>a>img:hover {
+  transition: 150ms linear;
+  transform: scale(1.2);
+}
+
+#studios>a>img:hover {
+  transition: 150ms linear;
+  transform: scale(1.2);
+}
+
+/* Dimensionner la carte */
+#carte {
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  grid-column: 2/3;
+  grid-row: 2/2;
+}
+
+section:nth-of-type(5)>p {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+section:nth-of-type(5)>h1{
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+}
